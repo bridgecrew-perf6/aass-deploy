@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  #  api-gateway:
+  #    image: tomhoffer/aass-api-server-rest
+  #    build: .
+  #    command: npm run start
+  #    ports:
+  #      - "3000:3000"
+
+  soap:
+    image: tomhoffer/aass-api-server-soap
+    build: .
+    command: npm run start:soap
+    ports:
+      - "8000:8000"
+
+  #auth:
+  #  image: tomhoffer/aass-api-server-rest
+  #  build: .
+  #  command: npm run start
+  #  ports:
+  #    - "3000:3000"
+
+  order:
+    image: tomhoffer/aass-order-service
+    build: .
+    command: npm run start
+    ports:
+      - "3002:3002"
+
+  item:
+    image: tomhoffer/aass-item-service
+    build: .
+    command: npm run start
+    ports:
+      - "3001:3001"
+
+  #payment:
+  #  image: tomhoffer/aass-api-server-rest
+  #  build: .
+  #  command: npm run start
+  #  ports:
+  #    - "3000:3000"
+
