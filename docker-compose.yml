@@ -1,25 +1,11 @@
 version: "3.9"
 
 services:
-  #  api-gateway:
-  #    image: tomhoffer/aass-api-server-rest
-  #    build: .
-  #    command: npm run start
-  #    ports:
-  #      - "3000:3000"
-
   soap:
     image: tomhoffer/aass-api-server-soap
     command: npm run start:soap
     ports:
       - "8000:8000"
-
-  #auth:
-  #  image: tomhoffer/aass-api-server-rest
-  #  build: .
-  #  command: npm run start
-  #  ports:
-  #    - "3000:3000"
 
   order:
     image: tomhoffer/aass-order-service
@@ -44,11 +30,4 @@ services:
     command: bash -c "/usr/bin/nginx -g 'daemon off;'"
     ports:
       - 8081:8081
-
-  #payment:
-  #  image: tomhoffer/aass-api-server-rest
-  #  build: .
-  #  command: npm run start
-  #  ports:
-  #    - "3000:3000"
 
